@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E536FF33-5970-4502-98A3-6A2CA900F763}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CrateFighter</RootNamespace>
+    <AssemblyName>CrateFighter</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.GameEngine2D" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="NoCleanupScene.cs" />
+    <Compile Include="Support.cs" />
+    <Compile Include="..\..\MAINMENU\menu.composer.cs">
+      <Link>menu.composer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MAINMENU\menu.cs">
+      <Link>menu.cs</Link>
+    </Compile>
+    <Compile Include="GUI.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="boxCollider.cs" />
+    <Compile Include="Ground.cs" />
+    <Compile Include="Wall.cs" />
+    <Compile Include="TerrainObjects.cs" />
+    <Compile Include="BaseTerrain.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Animation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="assets\" />
+    <Folder Include="assets\sfx\" />
+    <Folder Include="assets\animations\" />
+    <Folder Include="assets\levels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\crate_sideup.png" />
+    <Content Include="assets\blade.png" />
+    <Content Include="assets\crate_sidedown.png" />
+    <Content Include="assets\Saber1.mp3" />
+    <Content Include="assets\levelStart.png" />
+    <Content Include="assets\guitest.png" />
+    <Content Include="assets\sfx\jump1.wav" />
+    <Content Include="assets\sfx\jump2.wav" />
+    <Content Include="assets\sfx\jump3.wav" />
+    <Content Include="assets\sfx\jump4.wav" />
+    <Content Include="assets\Ackman.mp3" />
+    <Content Include="assets\platformPlaceholder.png" />
+    <Content Include="assets\playerSprites2.png" />
+    <Content Include="assets\animations\SamuraiRun.jpg" />
+    <Content Include="assets\animations\SamuraiRun.xml" />
+    <Content Include="assets\animations\CatKick.jpg" />
+    <Content Include="assets\animations\CatStunned.jpg" />
+    <Content Include="assets\animations\CatKick.xml" />
+    <Content Include="assets\animations\CatStunned.xml" />
+    <Content Include="assets\levels\fail.jpg" />
+    <Content Include="assets\levels\heart.jpg" />
+    <Content Include="assets\animations\1Hit.jpg" />
+    <Content Include="assets\animations\2Hits.jpg" />
+    <Content Include="assets\animations\3Hits.jpg" />
+    <Content Include="assets\animations\4Hits.jpg" />
+    <Content Include="assets\animations\5HITS.jpg" />
+    <Content Include="assets\animations\CatBlock.jpg" />
+    <Content Include="assets\animations\Gui.jpg" />
+    <Content Include="assets\animations\Mon1Attack.jpg" />
+    <Content Include="assets\animations\Mon1Death.jpg" />
+    <Content Include="assets\animations\Mon1Idle.jpg" />
+    <Content Include="assets\animations\Mon1Walk.jpg" />
+    <Content Include="assets\animations\OneFrameHighKick.jpg" />
+    <Content Include="assets\animations\OneFrameLowKick.jpg" />
+    <Content Include="assets\animations\OneFrameMidKick.jpg" />
+    <Content Include="assets\animations\OneFramePunch.jpg" />
+    <Content Include="assets\animations\QuickKick.jpg" />
+    <Content Include="assets\animations\QuickKick2.jpg" />
+    <Content Include="assets\animations\1Hit.xml" />
+    <Content Include="assets\animations\3Hits.xml" />
+    <Content Include="assets\animations\4Hits.xml" />
+    <Content Include="assets\animations\5HITS.xml" />
+    <Content Include="assets\animations\CatBlock.xml" />
+    <Content Include="assets\animations\Filename.xml" />
+    <Content Include="assets\animations\Gui.xml" />
+    <Content Include="assets\animations\Mon1Attack.xml" />
+    <Content Include="assets\animations\Mon1Death.xml" />
+    <Content Include="assets\animations\Mon1Idle.xml" />
+    <Content Include="assets\animations\Mon1Walk.xml" />
+    <Content Include="assets\animations\OneFrameHighKick.xml" />
+    <Content Include="assets\animations\OneFrameLowKick.xml" />
+    <Content Include="assets\animations\OneFrameMidKick.xml" />
+    <Content Include="assets\animations\OneFramePunch.xml" />
+    <Content Include="assets\animations\QuickKick.xml" />
+    <Content Include="assets\animations\QuickKick2.xml" />
+    <Content Include="assets\levels\levelTwo.xml" />
+    <Content Include="assets\animations\catIdle.jpg" />
+    <Content Include="assets\animations\catWalk.jpg" />
+    <Content Include="assets\animations\catIdle.xml" />
+    <Content Include="assets\animations\catWalk.xml" />
+    <Content Include="assets\animations\2Hits.xml" />
+    <Content Include="assets\sfx\hit1.wav" />
+    <Content Include="assets\sfx\hit2.wav" />
+    <Content Include="assets\sfx\hit3.wav" />
+    <Content Include="assets\sfx\attack1.wav" />
+    <Content Include="assets\sfx\attack2.wav" />
+    <Content Include="assets\sfx\attack3.wav" />
+    <Content Include="assets\levels\levelTwo.png" />
+  </ItemGroup>
+</Project>
